@@ -1,0 +1,28 @@
+use warnings;
+use strict;
+
+use Test::More;
+use Catalyst::Test 'Blokje';
+use HTTP::Request::Common;
+use JSON::Any;
+
+
+sub json_request {
+    my $path     = shift;
+    my $perldata = shift;
+
+    my $j       = JSON::Any->new;
+
+    my $data    = $j->encode($perldata);
+
+    my $res     = request(
+        POST $path,
+        Content_Type => 'application/json',
+        Content => $data,
+    );
+
+    return $j->decode($res->content);
+
+}
+
+note(explain(json_request('/quiz/team/update', {test => 1})));

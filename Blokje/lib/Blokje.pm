@@ -33,9 +33,12 @@ $VERSION = eval $VERSION;
 # local deployment.
 
 __PACKAGE__->config(
-    name => 'Blokje',
+    name    => 'Blokje',
     # Disable deprecated behavior needed by old applications
     disable_component_resolution_regex_fallback => 1,
+    'View::JSON' => {
+        expose_stash    => [qw/json/],
+    },
 );
 
 # Start the application
