@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>
+        </title>
+        <link rel="stylesheet" href="[% c.uri_for('/quiz') %]/themes/default/jquery.mobile.css"
+        />
+        <link rel="stylesheet" href="[% c.uri_for('/quiz/master') %]/my.css" />
+        <link rel="stylesheet" href="[% c.uri_for('/quiz') %]/font-awesome/jqm-icon-pack-2.1.2-fa.css" />
+        
+        <style>
+            /* App custom styles */
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.1.1/jquery.mobile-1.1.1.min.js">
+        </script>
+        <script src="[% c.uri_for('/quiz/master') %]/my.js">
+        </script>
+        <script src="[% c.uri_for('/quiz/master') %]/quiz_master.js">
+        </script>
+    </head>
+    
+    <body>
+        <!-- Home -->
+        <div data-role="page" id="home">
+            <div data-theme="a" data-role="header">
+                <h3>
+                    Dashboard
+                </h3>
+            </div>
+            <div data-role="content">
+                <a data-role="button" data-theme="b" href="#vragen">
+                    Vragen
+                </a>
+                <a data-role="button" data-theme="b" href="#teamlist">
+                    Team List
+                </a>
+            </div>
+        </div>
+        <div data-role="page" id="vragen" data-add-back-btn="true">
+            <div data-theme="a" data-role="header" >
+                <a data-rel="back" data-back-btn-text="previous" data-role="button">back</a>
+                <h3>
+                    Vragen
+                </h3>
+            </div>
+            <div data-role="content">
+                <ul data-role="listview" data-divider-theme="b" data-inset="true">
+                </ul>
+            </div>
+        </div>
+        <div data-role="page" id="teamlist" data-add-back-btn="true">
+            <div data-theme="a" data-role="header" >
+                <a data-rel="back" data-back-btn-text="previous" data-role="button">back</a>
+                <h3>
+                    Team List
+                </h3>
+            </div>
+            <div data-role="content">
+                <ul data-role="listview" data-divider-theme="b" data-inset="true">
+                </ul>
+            </div>
+        </div>
+        <!-- Vraag -->
+        <div data-role="page" id="vraag" data-add-back-btn="true">
+            <div data-theme="a" data-role="header" >
+                <a data-rel="back" data-back-btn-text="previous" data-role="button">back</a>
+                <h3>
+                    Vraag
+                </h3>
+            </div>
+            <div data-role="content">
+                <h2>
+                    Vraag
+                </h2>
+                <div data-role="fieldcontain">
+                    <fieldset data-role="controlgroup" data-type="vertical">
+                        <legend>
+                        </legend>
+                        <input id="radio1" name="" value="" type="radio">
+                        <label for="radio1">
+                            Option
+                        </label>
+                        <input id="radio2" name="" value="radio2" type="radio">
+                        <label for="radio2">
+                            Option
+                        </label>
+                        <input id="radio3" name="" value="radio3" type="radio">
+                        <label for="radio3">
+                            Option
+                        </label>
+                    </fieldset>
+                </div>
+                <a data-role="button" data-theme="b" href="#page2" class="activeer">
+                    Activeer die slettebak
+                </a>
+                <a data-role="button" data-theme="b" href="#page2" class="kut">
+                    Kut! opnieuw
+                </a>
+            </div>
+        </div>
+        <!-- Teamlijst -->
+        <div data-role="page" id="teams" data-add-back-btn="true">
+            <div data-theme="a" data-role="header">
+                <a data-rel="back" data-back-btn-text="previous">back</a>
+                <h3>
+                    Teams
+                </h3>
+            </div>
+            <div data-role="content">
+                <ul data-role="listview" data-divider-theme="b" data-inset="true">
+                    <li data-theme="c">
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <script>
+              //App custom javascript
+        </script>
+    </body>
+
+</html>

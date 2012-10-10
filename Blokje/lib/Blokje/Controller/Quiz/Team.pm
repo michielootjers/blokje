@@ -28,19 +28,20 @@ Catalyst Controller.
 
 =cut
 
-sub index :Path :Args(0) {
-    my ( $self, $c ) = @_;
-
-    $c->response->body('Matched Blokje::Controller::Quiz::Team in Quiz::Team.');
-}
-
 sub base : Chained('/quiz/base') : PathPart('team') : CaptureArgs(0) {}
 
 sub update : Chained('base') : PathPart('update') : Args(0) {
     my ($self, $c) = @_;
 
-    $c->stash->{json} = {
-        result  => 1,
+    if (
+        $c->req->params->{name}
+    ) {
+        $c->session->{quiz}->{team} = $c->req->params->{name};
+        $c->model('DB::QuizTeam')->search({team => $c->req->params->{name}
+            })->delete;
+        $c->model('DB::QuizTeam')->create({team => $c->req->params->{name} });
+
+        $c->stash->{json}->{result} = 1;
     }
 }
 

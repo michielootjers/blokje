@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>
+        </title>
+        <link rel="stylesheet" href="[% c.uri_for('/quiz') %]/themes/default/jquery.mobile.css"
+        />
+
+        <link rel="stylesheet" href="[% c.uri_for('/quiz') %]/my.css" />
+        <style>
+            /* App custom styles */
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.1.1/jquery.mobile-1.1.1.min.js">
+        </script>
+        <script src="[% c.uri_for('/quiz') %]/my.js">
+        </script>
+        <script src="[% c.uri_for('/quiz') %]/blokje_quiz.js">
+        </script>
+        <script type="text/javascript" src="//use.typekit.net/tgu6fpj.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    </head>
+    
+    <body>
+        <!-- First -->
+        <div data-role="page" data-theme="a" id="page6">
+            <div data-role="content">
+                <div style="text-align:center;position:absolute;height:105px;top:40%;margin-top:-52px;left:50%;margin-left:-55px;">
+                    <img style="width: 110px; height: 105px" src="http://assets.codiqa.com/ps/33333/bf55d4eeb494310ablokje-klein.png">
+                    <img style="width:32px;height:32px;display:block;margin:0 auto;" src="[% c.uri_for('/quiz') %]/images/ajax-loader-klein.gif" />
+                </div>
+            </div>
+        </div>
+        <!-- Nothing there -->
+        <div data-role="page" data-theme="a" id="niks">
+            <div data-role="content">
+                <div style="width:90%;text-align:center;position:absolute;height:268px;top:50%;margin-top:-185px;margin-left:auto;margin-right:auto;">
+                    <img style="width: 104px; height: 268px" src="[% c.uri_for('/quiz') %]/images/blokje-klein-nix.png"><br/><br/>
+                    <div style="padding:0 0 0 55px;position:relative;width:170px;margin:0 auto">
+                        <img style="width:45px;height:45px;position:absolute;left:0;top:50%;margin-top:-23px;" src="[% c.uri_for('/quiz') %]/images/ajax-loaderrr.gif" />
+                        <span style="font-size:25px;padding-left:10px;">Wachten op <br/>le question!</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Home -->
+        <div data-role="page" id="page1">
+            <!--
+<div data-theme="a" data-role="header">
+                <h3>
+                    Blokje Quiz
+                </h3>
+            </div>
+-->
+            <div data-role="content">
+                <div data-role="fieldcontain">
+                    <div style="text-align:center;margin-bottom:15px">
+                        <img src="[% c.uri_for('/quiz') %]/images/blokje-in.png" />
+                    </div>
+                    <fieldset data-role="controlgroup">
+                        <label for="textinput1">
+                        </label>
+                        <input name="Teamnaam" id="textinput1" placeholder="Teamnaam" value=""
+                        type="text">
+
+
+                    </fieldset>
+                </div>
+                <a data-role="button" data-transition="pop" data-theme="b" href="#page2"
+                data-icon="arrow-r" data-iconpos="right">
+                    Het blokje in
+                </a>
+            </div>
+        </div>
+        <!-- Vragen -->
+        <div data-role="page" id="page2">
+            <!--
+<div data-theme="a" data-role="header">
+                <h3>
+                    Blokje Quiz
+                </h3>
+            </div>
+-->
+            <div data-role="content">
+                <h3>
+                    Vraag laden
+                </h3>
+                <div data-role="fieldcontain">
+                    <fieldset data-role="controlgroup" data-type="vertical">
+                        <legend>
+                        </legend>
+                    </fieldset>
+                </div>
+                <a data-role="button" data-theme="b" href="#page3" data-icon="arrow-r"
+                data-iconpos="right">
+                    Bevestig
+                </a>
+            </div>
+        </div>
+        <!-- Done -->
+        <div data-role="page" id="page3">
+            <!--
+<div data-theme="a" data-role="header">
+                <h3>
+                    Blokje Quiz
+                </h3>
+            </div>
+-->
+            <div data-role="content">
+
+                <div class="ikont2">
+                *
+                </div>
+                <h2 style="text-align:center;font-size:30px">
+                    Thank you <br/>very much!
+                </h2>
+            </div>
+        </div>
+        <script>
+              //App custom javascript
+        </script>
+    </body>
+
+</html>

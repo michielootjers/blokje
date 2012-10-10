@@ -13,15 +13,18 @@ use Catalyst::Runtime 5.80;
 #                 directory
 
 use Catalyst qw/
-    -Debug
     ConfigLoader
     Static::Simple
+
+    Session
+    Session::Store::File
+    Session::State::Cookie
 /;
 
 extends 'Catalyst';
 
-our $VERSION = '0.01';
-$VERSION = eval $VERSION;
+our $VERSION    = '0.01';
+$VERSION        = eval $VERSION;
 
 # Configure the application.
 #
